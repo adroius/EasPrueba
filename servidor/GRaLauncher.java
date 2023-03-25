@@ -250,9 +250,9 @@ public class GRaLauncher extends JFrame implements ActionListener,
          int i;
               i=0; 
                  Object[] v = new Object[50];
-                 Enumeration enum = raAgency.getServers(this).elements();
-                 while (enum.hasMoreElements()){
-                 v[i] = (Object) enum.nextElement();
+                 Enumeration enumerado = raAgency.getServers(this).elements();
+                 while (enumerado.hasMoreElements()){
+                 v[i] = (Object) enumerado.nextElement();
                    i = i + 1;
                  }
 		String s = (String) JOptionPane.showInputDialog(

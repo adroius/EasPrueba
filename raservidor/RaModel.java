@@ -115,7 +115,7 @@ public class RaModel
                     socket = serverSocket.accept();
                     System.out.println ("ListenThread: Recibiendo un mensaje");
                     new ReceiveMessageThread (parent, socket).start();
-                    yield();
+                    //yield();
                 }
             }
             catch (IOException e){

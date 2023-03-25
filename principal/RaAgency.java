@@ -204,7 +204,7 @@ public class RaAgency
                     if(shouldLive != listenThread) return;
 		    System.out.println ("ListenThread: tomando un mensaje");
                     new ReceiveMessageThread (parent, socket).start();
-                    yield();
+                    //yield();
                 }
             }
             catch (IOException e){

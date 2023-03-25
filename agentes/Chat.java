@@ -46,9 +46,9 @@ public class Chat extends Ra
          s = "hola que tal";
         v = new Vector();
         RaAddress address;
-        Enumeration enum = agency.getServers(this).elements();
-        while (enum.hasMoreElements()){
-            address = (RaAddress) enum.nextElement();
+        Enumeration enumerado = agency.getServers(this).elements();
+        while (enumerado.hasMoreElements()){
+            address = (RaAddress) enumerado.nextElement();
             v.addElement (address);
         }
     }

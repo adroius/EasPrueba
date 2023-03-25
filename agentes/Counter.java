@@ -1,17 +1,15 @@
-package org.kaariboga.agents;
+package raf.agentes;
 
 import java.lang.Thread;
 
-import org.kaariboga.core.Kaariboga;
-import org.kaariboga.core.KaaribogaEvent;
+
 
 
 /**
  * Demonstrates the handling of time consuming applications by
  * couning up to a given number.
  */
-public class Counter extends Kaariboga
-{
+public class Counter{
     /**
      * Used to end the thread.
      */
@@ -26,7 +24,7 @@ public class Counter extends Kaariboga
      * Creates a new counter that counts up to a given number.
      */
     public Counter (String name){
-        super("GoodCounter_" + name);
+        super();
     }
 
     /**
@@ -42,7 +40,7 @@ public class Counter extends Kaariboga
             System.out.println("Counting " + i);
             current.yield();
         }
-        fireDestroyRequest();
+        //fireDestroyRequest();
     }
 
     /**
