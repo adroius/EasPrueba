@@ -25,7 +25,7 @@ import raf.principal.*;
 /**
  * Esta clase implementa un lanzador de entorno RAF con interfaz de usuario.
  */
-class GRALauncher extends JFrame implements ActionListener,
+class GRaLauncher extends JFrame implements ActionListener,
                                             ListSelectionListener,
                                             AgencyListener{
     /**
@@ -78,7 +78,7 @@ class GRALauncher extends JFrame implements ActionListener,
      * Crea un nuevo lanzador GRaLauncher.
 
      */
-    public GRALauncher (){
+    public GRaLauncher (){
         super("GRaLauncher");
 
         long byteCodeDelay;
