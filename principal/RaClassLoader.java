@@ -5,6 +5,7 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.net.UnknownHostException;
+import java.security.cert.Certificate;
 import java.util.Hashtable;
 import java.security.CodeSource;
 import java.security.SecureClassLoader;
@@ -101,7 +102,7 @@ public class RaClassLoader extends SecureClassLoader{
   
          
             URL srcURL = new URL ("http", sourceHost.host.getHostAddress(), sourceHost.port, "/");
-            CodeSource codeSrc = new CodeSource (srcURL, null); 
+            CodeSource codeSrc = new CodeSource (srcURL, (Certificate[]) null);
             c = defineClass (name, data, 0, data.length, codeSrc);
         }
 	catch (java.net.MalformedURLException e) {

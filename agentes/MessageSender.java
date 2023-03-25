@@ -1,20 +1,14 @@
-package org.kaariboga.agents;
+package raf.agentes;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Enumeration;
 import javax.swing.*;
 
-import org.kaariboga.core.Kaariboga;
-import org.kaariboga.core.KaaribogaAddress;
-import org.kaariboga.core.KaaribogaEvent;
-import org.kaariboga.core.KaaribogaMessage;
-
 /**
  * The MessageSender agent sends a message to all agents on the base server.
  */
-public class MessageSender extends Kaariboga
-{
+public class MessageSender{
     /**
      * Just initialize the super class.
      *
@@ -23,7 +17,7 @@ public class MessageSender extends Kaariboga
      * method to generate a unique name.
      */
     public MessageSender (String name){
-        super("MessageSender_" + name);
+        //super("MessageSender_" + name);
     }
 
     /**
@@ -41,16 +35,15 @@ public class MessageSender extends Kaariboga
         // KaaribogaAddress baseAdr  = base.getBaseAddress(this);
         // KaaribogaAddress sender  = new KaaribogaAddress (baseAdr.host, baseAdr.port, getName());
         // KaaribogaAddress recipient = new KaaribogaAddress (host, port, name);
-        Enumeration names = base.getKaaribogaNames (this);
-        while (names.hasMoreElements()){
-            // simple constructors for address save for local use
-            KaaribogaAddress sender  = new KaaribogaAddress (getName());
-            KaaribogaAddress recipient = new KaaribogaAddress ((String) names.nextElement());
-            KaaribogaMessage message = new KaaribogaMessage (sender, recipient, "MESSAGE", content, null);
-            fireKaaribogaMessage (message);
-        }
-
-        fireDestroyRequest();
+        //Enumeration names = base.getKaaribogaNames (this);
+        //while (names.hasMoreElements()){
+        //    // simple constructors for address save for local use
+        //    KaaribogaAddress sender  = new KaaribogaAddress (getName());
+        //    KaaribogaAddress recipient = new KaaribogaAddress ((String) names.nextElement());
+        //    KaaribogaMessage message = new KaaribogaMessage (sender, recipient, "MESSAGE", content, null);
+        //    fireKaaribogaMessage (message);
+        //}
+        //fireDestroyRequest();
     }
 
 }

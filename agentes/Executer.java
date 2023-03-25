@@ -1,9 +1,8 @@
-package org.kaariboga.agents;
+package raf.agentes;
 
 import java.io.IOException;
 import java.lang.Runtime;
-import org.kaariboga.core.Kaariboga;
-import org.kaariboga.core.KaaribogaEvent;
+
 
 
 /**
@@ -12,8 +11,7 @@ import org.kaariboga.core.KaaribogaEvent;
  * -soff option which disables the security manager:
  * java org.kaariboga.server.Boga -soff
  */
-public class Executer extends Kaariboga
-{
+public class Executer{
     /**
      * Runtime object of the current JVM.
      * Declared as an object varible to demonstrate the use of transient.
@@ -31,7 +29,7 @@ public class Executer extends Kaariboga
      * paintbrush program.
      */
     public Executer (String name){
-        super("Executer_" + name);
+        //super("Executer_" + name);
         this.command = "pbrush";
     }
 

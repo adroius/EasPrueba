@@ -1,17 +1,14 @@
-package org.kaariboga.agents;
+package raf.agentes;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import org.kaariboga.core.Kaariboga;
-import org.kaariboga.core.KaaribogaAddress;
-import org.kaariboga.core.KaaribogaEvent;
+
 
 /**
  * Example of a simple kaariboga that travels to another base
  * returns and destroys itself.
  */
-public class ReturnAgent extends Kaariboga
-{
+public class ReturnAgent{
     /**
      * Number of trips.
      */
@@ -25,7 +22,7 @@ public class ReturnAgent extends Kaariboga
      * method to generate a unique name.
      */
     public ReturnAgent(String name){
-        super("ReturnAgent_" + name);
+        //super("ReturnAgent_" + name);
     }
 
     /**
@@ -33,7 +30,7 @@ public class ReturnAgent extends Kaariboga
      * initialisation on the agent and before run.
      */
     public void onCreate(){
-        destination = base.getBaseAddress(this);
+        //destination = base.getBaseAddress(this);
     }
 
     /**
@@ -44,11 +41,11 @@ public class ReturnAgent extends Kaariboga
         System.out.println("ReturnAgent: I am running! ");
         if (trips == 1){
             System.out.println ("ReturnAgent: Here I am.");
-            fireDispatchRequest();
+            //fireDispatchRequest();
         }
         if (trips > 1){
             System.out.println ("ReturnAgent: Request for destruction.");
-            fireDestroyRequest();
+            //fireDestroyRequest();
         }
     }
 

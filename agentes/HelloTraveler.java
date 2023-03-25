@@ -1,19 +1,15 @@
-package org.kaariboga.agents;
+package raf.agentes;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import javax.swing.*;
 
-import org.kaariboga.core.Kaariboga;
-import org.kaariboga.core.KaaribogaAddress;
-import org.kaariboga.core.KaaribogaEvent;
 
 /**
  * The travel agent just opens a dialog, travels to another base and prints
  * Hello World to the screen. After that it destroys itself.
  */
-public class HelloTraveler extends Kaariboga
-{
+public class HelloTraveler{
     /**
      * Just initialize the super class.
      *
@@ -22,7 +18,7 @@ public class HelloTraveler extends Kaariboga
      * method to generate a unique name.
      */
     public HelloTraveler(String name){
-        super("Traveler_" + name);
+        //super("Traveler_" + name);
     }
 
     /**
@@ -39,10 +35,10 @@ public class HelloTraveler extends Kaariboga
         }
         catch (UnknownHostException e){
             System.err.println("Error: Could not determine host address!");
-            fireDestroyRequest();
+            //fireDestroyRequest();
         }
-        destination = new KaaribogaAddress(target, 10101, null);
-        fireDispatchRequest();
+        //destination = new KaaribogaAddress(target, 10101, null);
+        //fireDispatchRequest();
     }
 
     /**
@@ -51,7 +47,7 @@ public class HelloTraveler extends Kaariboga
      */
     public void onArrival(){
         System.out.println("Hi! I am the traveler. ");
-        fireDestroyRequest();
+        //fireDestroyRequest();
     }
 
 

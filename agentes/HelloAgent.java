@@ -1,15 +1,12 @@
-package org.kaariboga.agents;
+package raf.agentes;
 
 import java.lang.InterruptedException;
 
-import org.kaariboga.core.Kaariboga;
-import org.kaariboga.core.KaaribogaEvent;
 
 /**
  * The HelloAgents just prints Hello World to the screen.
  */
-public class HelloAgent extends Kaariboga
-{
+public class HelloAgent{
     /**
      * How often did the agent travel?
      */
@@ -23,7 +20,7 @@ public class HelloAgent extends Kaariboga
      * method to generate a unique name.
      */
     public HelloAgent(String name){
-        super("Hallodri_" + name);
+        //super("Hallodri_" + name);
     }
 
     /**
@@ -32,7 +29,7 @@ public class HelloAgent extends Kaariboga
      */
     public void run(){
         System.out.println("Hello World! ");
-        if (trips > 0) fireDestroyRequest();
+        //if (trips > 0) fireDestroyRequest();
     }
 
     /**
